@@ -286,19 +286,19 @@ void loop()
   Screen.update();
 
  // проверяем, какой экран активен. Если активен главный экран - сбрасываем таймер ожидания. Иначе - проверяем, не истекло ли время ничегонеделанья.
-  AbstractHALScreen* activeScreen = Screen.getActiveScreen();
-  if(activeScreen == StartScreen)
-  {
-    screenIdleTimer = millis();
-  }
-  else
-  {
-      if(millis() - screenIdleTimer > RESET_TO_MAIN_SCREEN_DELAY)
-      {
-        screenIdleTimer = millis();
-        Screen.switchToScreen(StartScreen);
-      }
-  } // else  
+  // AbstractHALScreen* activeScreen = Screen.getActiveScreen();
+  // if(activeScreen == StartScreen)
+  // {
+  //   screenIdleTimer = millis();
+  // }
+  // else
+  // {
+  //     if(millis() - screenIdleTimer > RESET_TO_MAIN_SCREEN_DELAY)
+  //     {
+  //       screenIdleTimer = millis();
+  //       Screen.switchToScreen(StartScreen);
+  //     }
+  // } // else  
 }
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 bool nestedYield = false;
